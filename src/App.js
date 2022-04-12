@@ -1,12 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Basket from './components/Basket';
+import BasketStore from './store/basketStore';
+
+const basketStore = new BasketStore([]);
 
 function App() {
     return (
         <div className="App">
-            <Basket />
+            <Basket basket={basketStore}/>
         </div>
     );
 }
